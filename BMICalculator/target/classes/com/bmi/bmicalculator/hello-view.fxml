@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="358.0" prefWidth="576.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bmi.bmicalculator.HelloController">
+   <children>
+      <MenuBar fx:id="AnchorPane" prefHeight="28.0" prefWidth="576.0" style="-fx-background-color: skyred;">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <GridPane prefHeight="330.0" prefWidth="576.0" style="-fx-background-color: skyblue;">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="257.0" minWidth="10.0" prefWidth="232.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="131.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="262.0" minWidth="10.0" prefWidth="236.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="136.0" minHeight="0.0" prefHeight="27.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="184.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="214.0" minHeight="10.0" prefHeight="111.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="166.0" minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="inputHeight" prefHeight="26.0" prefWidth="185.0" GridPane.rowIndex="2" />
+            <TextField fx:id="inputWeight" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#OnButtonCalculateClick" prefHeight="26.0" prefWidth="131.0" text="Calculate" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Your BMI Value:" GridPane.rowIndex="4" />
+            <Label text="Height(m)" GridPane.rowIndex="1" />
+            <Label text="Weight(kg)" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label fx:id="label1" prefHeight="17.0" prefWidth="116.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="label2" prefHeight="17.0" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <RadioButton fx:id="english" mnemonicParsing="false" selected="true" text="English">
+               <toggleGroup>
+                  <ToggleGroup fx:id="but" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="metric" mnemonicParsing="false" selected="true" text="Metric" toggleGroup="$but" GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+   </children>
+</FlowPane>
